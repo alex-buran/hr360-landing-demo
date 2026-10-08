@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; font-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'self'; manifest-src 'self'">
+<title>HR Analitic 360 — İK analitiği ve karar destek platformu · Tasarım gösterimi</title>
+<meta name="description" content="Personel verisini yönetim kararlarına dönüştüren İK analitiği ve karar destek platformu. Rol bazlı yetkilendirme, denetim kaydı ve Avrupa Birliği'nde veri saklama.">
+<meta name="theme-color" content="#14161a">
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="HR Analitic 360 — İK analitiği ve karar destek platformu">
+<meta property="og:description" content="Ne oldu? Sorun nerede? Kimler etkileniyor? Hangi aksiyon? Personel verisi bu dört soruya yanıt veren göstergelere, uyarılara ve aksiyon kayıtlarına dönüşür.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="css/site.css">
+<script src="js/erken.js"></script>
+</head>
+<body>
+<a class="atla" href="#icerik">İçeriğe geç</a>
+
+<header class="ust">
+  <div class="kap">
+    <a class="marka" href="#" aria-label="HR Analitic 360, sayfanın başı"><span class="marka-halka" aria-hidden="true">360</span>HR Analitic</a>
+    <button class="menu-dugme" type="button" aria-expanded="false" aria-controls="menu">Menü</button>
+    <nav class="menu" id="menu" aria-label="Ana gezinme">
+      <a href="#sorular">Özellikler</a>
+      <a href="#guvenlik">Güvenlik</a>
+      <a href="#fiyatlandirma">Fiyatlandırma</a>
+      <a href="#sss">Sık sorulan sorular</a>
+      <a class="dugme dugme--mavi" href="#">Giriş yap</a>
+    </nav>
+  </div>
+</header>
+
+<main id="icerik">
+
+  <section class="kahraman" aria-labelledby="h1">
+    <div class="arka" aria-hidden="true"><span class="arka-izgara"></span><span class="arka-izgara-isik"></span><span class="arka-isik"></span></div>
+    <div class="kap kahraman-izgara">
+      <h1 id="h1">
+        <span class="h1-satir">Ne oldu?</span>
+        <span class="h1-satir">Sorun nerede?</span>
+        <span class="h1-satir">Kimler etkileniyor?</span>
+        <span class="h1-satir">Hangi aksiyon?</span>
+      </h1>
+      <div class="kahraman-yan">
+        <p>Personel verisini yönetim kararlarına dönüştüren İK analitiği ve karar destek platformu.</p>
+        <div class="dugmeler">
+          <a class="dugme dugme--mavi" href="#">Giriş yap</a>
+          <a class="dugme dugme--cizgi-beyaz" href="#fiyatlandirma">Fiyatlandırma</a>
+          <a class="dugme dugme--duz" href="#iletisim">Teklif talebi</a>
+        </div>
+      </div>
+      <figure class="kahraman-ekran">
+        <div class="ekran">
+          <span class="damga">Örnek veri</span>
+          <picture><source media="(max-width: 700px)" srcset="img/dashboard-icerik.webp" width="2400" height="1520"><img src="img/dashboard.webp" width="2880" height="1800" alt="HR Analitic 360 ana pano: toplam çalışan 195, devir oranı yüzde 10,2, devamsızlık oranı yüzde 11,2, açık pozisyon 9; işe alım eğilimi grafiği ve son işe alımlar." fetchpriority="high"></picture>
+        </div>
+        <figcaption class="gizli">Ürünün gerçek ekranı, kurgusal bir şirkete ait örnek verilerle.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="bolum" id="sorular" aria-labelledby="sorular-baslik">
+    <div class="kap">
+      <div class="giris-izgara">
+        <h2 class="baslik" id="sorular-baslik">Her ekran, bir yönetim sorusuna yanıt verir.</h2>
+        <p class="govde soluk">İK verisi çoğunlukla dağınık tablolarda bulunur. Mevcut Excel, CSV veya ODS dosyalarınız yüklenir; HR Analitic 360 bu veriyi sırasıyla gerçekleşen durumu, sorunun yerini ve etkilenenleri, son olarak alınması gereken aksiyonu gösterecek biçimde düzenler.</p>
+      </div>
+
+      <article class="soru soru--tam belir">
+        <div class="soru-baslik">
+          <h3 class="baslik">Ne oldu?</h3>
+          <p class="soru-ad">Pano</p>
+        </div>
+        <p class="govde">Toplam çalışan sayısı, devir hızı, devamsızlık oranı ve açık pozisyonlar tek ekranda izlenir. İşe alım eğilimi, kıdem dağılımı ve aktif–pasif çalışan oranı, yüklenen dosyadan hesaplanır.</p>
+        <div class="ekran">
+          <span class="damga">Örnek veri</span>
+          <img src="img/dashboard-dagilim.webp" width="2400" height="800" alt="Kıdem dağılımı sütun grafiği ve aktif–pasif çalışan oranı halka grafiği." loading="lazy">
+        </div>
+      </article>
+
+      <article class="soru soru--sag belir">
+        <div class="soru-baslik">
+          <h3 class="baslik">Sorun nerede?</h3>
+          <p class="soru-ad">Uyarılar</p>
+        </div>
+        <p class="govde">Deneme süresi bitişleri, sözleşme ve çalışma izni tarihleri, eğitim ve sertifika geçerlilikleri, yüksek izin bakiyesi ve yüksek devamsızlık kontrol edilir. Tanımlı eşiği aşan her durum ayrı bir sayaçta gösterilir.</p>
+        <div class="ekran">
+          <span class="damga">Örnek veri</span>
+          <img src="img/uyarilar-kartlar.webp" width="2400" height="660" alt="Uyarı sayaçları: deneme süresi bitişi 30 gün içinde 4 yaklaşan; yüksek devamsızlık 8 eşiği aşan; yüksek izin bakiyesi 1 eşiği aşan." loading="lazy">
+        </div>
+      </article>
+
+      <article class="soru soru--tam belir">
+        <div class="soru-baslik">
+          <h3 class="baslik">Kimler etkileniyor?</h3>
+          <p class="soru-ad">Uyarı listesi</p>
+        </div>
+        <p class="govde">Her uyarı; ilgili personel, departman, tarih ve kalan gün bilgisiyle listelenir. Böylece sorun, genel bir orandan çıkarılarak sorumluluk atanabilen somut bir kayda dönüşür.</p>
+        <div class="ekran">
+          <span class="damga">Örnek veri</span>
+          <img src="img/uyarilar-liste.webp" width="2400" height="904" alt="Uyarı listesi: personel, departman, tarih ve kalan gün; her satırda Aksiyon oluştur düğmesi." loading="lazy">
+        </div>
+      </article>
+
+      <article class="soru soru--sol belir">
+        <div class="soru-baslik">
+          <h3 class="baslik">Hangi aksiyon?</h3>
+          <p class="soru-ad">Aksiyon Merkezi</p>
+        </div>
+        <p class="govde">Uyarılardan aksiyon kaydı oluşturulur; sorumlu, termin ve durum atanır. Kayıtlar silinmez, kapanış notuyla tamamlanır; böylece her karar izlenebilir kalır.</p>
+        <div class="ekran">
+          <span class="damga">Örnek veri</span>
+          <img src="img/aksiyonlar-icerik.webp" width="2400" height="1120" alt="Aksiyon Merkezi: sorumlusu ve termini belirlenmiş aksiyonlar; Başla, Kapat ve Düzenle düğmeleri." loading="lazy">
+        </div>
+      </article>
+
+      <div class="digerler">
+        <article class="diger belir">
+          <div class="ekran">
+            <span class="damga">Örnek veri</span>
+            <img src="img/ise-alim-dar.webp" width="1640" height="1320" alt="İşe Alım ekranı: açık pozisyonlar, departman, lokasyon, talep tarihi, kişi sayısı ve durum." loading="lazy">
+          </div>
+          <h3 class="baslik">İşe alım</h3>
+          <p class="govde">Açık pozisyonlar, talep tarihleri ve durumları ile kaynaklara göre aday dönüşüm oranları izlenir.</p>
+        </article>
+        <article class="diger belir">
+          <div class="ekran">
+            <span class="damga">Örnek veri</span>
+            <img src="img/butce-dar.webp" width="1640" height="1600" alt="Ücret ve Bütçe ekranı: kapsanan personel, toplam brüt ücret, toplam işveren maliyeti ve ortalama brüt ücret; departman kırılımı." loading="lazy">
+          </div>
+          <h3 class="baslik">Ücret ve bütçe</h3>
+          <p class="govde">Toplam brüt ücret, işveren maliyeti ve departman kırılımı raporlanır. Kıdem tazminatı yükümlülüğü, kullanıcı tarafından girilen tavana göre hesaplanır; sistem bu değeri kendiliğinden varsaymaz. Erişim yalnızca yetkili rollere açıktır.</p>
+        </article>
+      </div>
+      <p class="liste-satir liste-satir--alt belir">İzin ve devamsızlık, performans, oryantasyon, eğitim ve icra takibi modülleri de aynı veri kümesini kullanır.</p>
+    </div>
+  </section>
+
+  <section class="bolum bolum--yuzey" aria-labelledby="adimlar-baslik">
+    <div class="kap">
+      <div class="giris-izgara">
+        <h2 class="baslik" id="adimlar-baslik">Veri aktarımından rapora üç aşama.</h2>
+      </div>
+      <ol class="adimlar">
+        <li class="adim belir"><h3>Yükleme</h3><p>Excel, CSV veya ODS biçimindeki personel dosyası yüklenir. Sütun adlarının ürün şablonuyla birebir aynı olması gerekmez.</p></li>
+        <li class="adim belir"><h3>Eşleştirme</h3><p>Tanınmayan sütunlar bir kez eşleştirilir. Eşleştirme kaydedilir ve sonraki yüklemelerde otomatik olarak uygulanır.</p></li>
+        <li class="adim belir"><h3>Raporlama</h3><p>Göstergeler, uyarılar ve aksiyon listesi oluşur. Eksik veri tahmin edilmez; ilgili alanda “Veri yetersiz” ifadesi görüntülenir.</p></li>
+      </ol>
+      <p class="soz belir"><strong>Veri bütünlüğü.</strong> Okunamayan hiçbir değer sessizce atılmaz; tümü yükleme raporunda listelenir. Kayıt tek işlemde yapılır; bir hata oluşursa mevcut veri değişmeden kalır.</p>
+    </div>
+  </section>
+
+  <section class="bolum bolum--koyu" id="guvenlik" aria-labelledby="guvenlik-baslik">
+    <div class="kap guvenlik-izgara">
+      <div class="metin">
+        <h2 class="baslik" id="guvenlik-baslik">Hassas personel verisi için tasarlanmış güvenlik yapısı.</h2>
+        <p>Ücret, icra ve kimlik bilgileri, kurumların en hassas verileri arasındadır. Bu nedenle güvenlik önlemleri sonradan eklenen bir ayar değil, ürünün temel bileşenleridir.</p>
+      </div>
+      <dl class="ozellikler">
+        <div class="ozellik belir"><dt>İki aşamalı doğrulama</dt><dd>Kurumsal planda zorunludur; oturum açma işlemi yalnızca parola ile tamamlanamaz.</dd></div>
+        <div class="ozellik belir"><dt>Rol bazlı yetkilendirme</dt><dd>Sahip, İK Uzmanı, Bordro, Eğitim ve Özet rolleri tanımlıdır. Ücret ve icra bilgileri yalnızca yetkili rollere gösterilir.</dd></div>
+        <div class="ozellik belir"><dt>Denetim kaydı</dt><dd>Hangi kullanıcının hangi veriyi ne zaman görüntülediği veya değiştirdiği kaydedilir. Kayıt yazılamıyorsa veri erişimi sağlanmaz.</dd></div>
+        <div class="ozellik belir"><dt>Hassas alanların şifrelenmesi</dt><dd>TC kimlik numarası, telefon, e-posta, özel durum ve çıkış nedeni alanları AES-256 ile şifrelenerek saklanır.</dd></div>
+        <div class="ozellik belir"><dt>Kurumlar arası yalıtım</dt><dd>Veritabanı, satır düzeyinde erişim denetimi uygular; her kurum yalnızca kendi verisine erişebilir.</dd></div>
+        <div class="ozellik belir"><dt>Oturum yönetimi</dt><dd>Etkin olmayan oturumlar otomatik olarak kapatılır (Kurumsal planda 30 dakika). Açık oturumlar kullanıcı tarafından görüntülenebilir ve sonlandırılabilir.</dd></div>
+        <div class="ozellik belir"><dt>Veri konumu</dt><dd>Veriler Avrupa Birliği sınırları içinde, İrlanda’daki bir veri merkezinde saklanır.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="bolum" id="fiyatlandirma" aria-labelledby="fiyat-baslik">
+    <div class="kap">
+      <div class="giris-izgara">
+        <h2 class="baslik" id="fiyat-baslik">Kuruma özel fiyatlandırma.</h2>
+        <p class="govde soluk">İki plan sunulmaktadır. Fiyat; çalışan ve kullanıcı sayısına göre belirlenir ve talebiniz doğrultusunda kuruma özel bir teklif hazırlanır.</p>
+      </div>
+      <div class="planlar">
+        <article class="plan plan--solo belir">
+          <h3>Solo</h3>
+          <p class="plan-not">Tek İK uzmanı ve küçük ekipler için.</p>
+          <ul class="plan-liste">
+            <li>Tüm analiz ekranları ve erken uyarılar</li>
+            <li>Excel, CSV ve ODS ile veri yükleme; sütun eşleştirmelerinin hatırlanması</li>
+            <li>Aksiyon Merkezi</li>
+            <li>Rol ayrımı gerektirmeyen küçük ekipler için basit kurulum</li>
+          </ul>
+          <a class="dugme dugme--cizgi" href="#iletisim" data-plan="Solo">Solo için teklif talebi</a>
+        </article>
+        <article class="plan plan--kurumsal belir">
+          <h3>Kurumsal</h3>
+          <p class="plan-not">Yetkilendirme ve denetim gerektiren kurumlar için.</p>
+          <ul class="plan-liste">
+            <li>Solo plandaki tüm özellikler</li>
+            <li>Zorunlu iki aşamalı doğrulama</li>
+            <li>Rol bazlı erişim; ücret ve icra verilerinin yalnızca yetkili rollere açılması</li>
+            <li>Denetim kaydının görüntülenmesi ve saklanması</li>
+            <li>Kısa oturum süresi: 30 dakika işlem yapılmazsa oturum kapanır</li>
+          </ul>
+          <p class="plan-ayrim">Hassas verilerle çalışan İK, bordro ve yönetim ekipleri için önerilir.</p>
+          <a class="dugme dugme--mavi" href="#iletisim" data-plan="Kurumsal">Kurumsal için teklif talebi</a>
+        </article>
+      </div>
+      <p class="fiyat-not">Fiyatlar henüz yayımlanmamıştır. Teklif talebi bağlayıcı değildir.</p>
+    </div>
+  </section>
+
+  <section class="bolum bolum--yuzey bolum--sss" id="sss" aria-labelledby="sss-baslik">
+    <div class="kap">
+      <div class="giris-izgara">
+        <h2 class="baslik" id="sss-baslik">Sık sorulan sorular</h2>
+      </div>
+      <div class="sss">
+        <details><summary>Hangi dosya biçimleri desteklenir?</summary><div><p>Excel (.xlsx, .xls), CSV ve ODS biçimleri desteklenir. Sütun adları ürün şablonundan farklı olabilir; tanınmayan sütunlar eşleştirme ekranında bir kez bağlanır ve sonraki yüklemelerde hatırlanır.</p></div></details>
+        <details><summary>Yükleme sırasında hata oluşursa veriler etkilenir mi?</summary><div><p>Hayır. Kayıt tek işlemde yapılır; hata oluşursa kurumunuzun mevcut verisi değişmeden kalır. Okunamayan veya hatalı değerler sessizce atılmaz, yükleme raporunda listelenir.</p></div></details>
+        <details><summary>Veriler nerede saklanır; başka kurumlar erişebilir mi?</summary><div><p>Veriler Avrupa Birliği’nde, İrlanda’daki bir veri merkezinde saklanır. Veritabanı satır düzeyinde erişim denetimi uygular; her kurum yalnızca kendi kayıtlarına erişebilir.</p></div></details>
+        <details><summary>Hangi kullanıcı hangi veriyi görüntüleyebilir?</summary><div><p>Sahip, İK Uzmanı, Bordro, Eğitim ve Özet olmak üzere beş rol tanımlıdır. Ücret ve icra gibi hassas veriler yalnızca yetkili rollere gösterilir. Her görüntüleme ve değişiklik denetim kaydına işlenir.</p></div></details>
+        <details><summary>Eksik veri olduğunda ne gösterilir?</summary><div><p>“Veri yetersiz” ifadesi gösterilir. Eksik değerler tahmin edilmez ve sıfır olarak hesaplanmaz; dışarıda kalan kayıtlar ekranda belirtilir.</p></div></details>
+        <details><summary>Kıdem tazminatı tutarı kesin midir?</summary><div><p>Hayır. Ücret ve Bütçe ekranındaki kıdem tazminatı yükümlülüğü, kullanıcı tarafından girilen tavana göre hesaplanan potansiyel bir üst sınırdır; gerçek ödeme, ayrılma nedenine bağlıdır. Kesin hesaplama için mali müşavirinize danışılmalıdır.</p></div></details>
+        <details><summary>Süreç nasıl başlar?</summary><div><p>Aşağıdaki teklif talebi formu doldurulur ve tarafınıza dönüş yapılır. Mevcut hesabı olan kullanıcılar, sağ üstteki “Giriş yap” bağlantısını kullanabilir.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="bolum bolum--iletisim" id="iletisim" aria-labelledby="iletisim-baslik">
+    <div class="kap iletisim-izgara">
+      <div class="metin">
+        <h2 class="baslik" id="iletisim-baslik">Teklif talebi</h2>
+        <p>Kurumunuzun büyüklüğü ve ihtiyaçları hakkında bilgi paylaşabilirsiniz; en kısa sürede dönüş yapılacaktır. Teklif talebi bağlayıcı değildir.</p>
+      </div>
+      <form class="form" id="form" action="#" method="POST" novalidate>
+        <div class="alan"><label for="ad">Ad soyad</label><input id="ad" name="Ad soyad" autocomplete="name" required><span class="hata" id="ad-hata" role="alert"></span></div>
+        <div class="alan"><label for="sirket">Kurum</label><input id="sirket" name="Kurum" autocomplete="organization" required><span class="hata" id="sirket-hata" role="alert"></span></div>
+        <div class="alan"><label for="eposta">İş e-posta adresi</label><input id="eposta" name="E-posta" type="email" autocomplete="email" required><span class="hata" id="eposta-hata" role="alert"></span></div>
+        <div class="alan"><label for="sayi">Çalışan sayısı</label>
+          <select id="sayi" name="Çalışan sayısı"><option value="">Seçiniz</option><option>1–50</option><option>51–200</option><option>201–500</option><option>500’den fazla</option></select></div>
+        <div class="alan alan--tam"><label for="plan">İlgilendiğiniz plan</label>
+          <select id="plan" name="Plan"><option>Henüz karar verilmedi</option><option>Solo</option><option>Kurumsal</option></select></div>
+        <div class="alan alan--tam"><label for="mesaj">Notunuz <span class="soluk">(isteğe bağlı)</span></label><textarea id="mesaj" name="Not" maxlength="1500"></textarea></div>
+        <div class="sahte" aria-hidden="true"><label>Bu alanı boş bırakınız <input name="_honey" tabindex="-1" autocomplete="off"></label></div>
+        <label class="onay"><input type="checkbox" id="onay" required><span>Kişisel verilerimin teklif sürecinde işlenmesini kabul ediyorum. <a href="#">Aydınlatma metni</a></span></label>
+        <span class="hata hata--tam" id="onay-hata" role="alert"></span>
+        <button class="dugme dugme--koyu" type="submit" id="gonder">Teklif talebini gönder</button>
+        <p class="form-durum" id="form-durum" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="alt">
+  <div class="kap">
+    <p>© 2026 HR Analitic 360. <a href="https://softburn.tech">Softburn.tech</a> tarafından tasarlanmış ve geliştirilmiştir. Bu sürüm bir tasarım gösterimidir: bağlantılar ve form devre dışıdır.</p>
+    <ul>
+      <li><a href="#">Giriş yap</a></li>
+      <li><a href="#">Gizlilik</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+</body>
+</html>
