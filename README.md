@@ -20,4 +20,6 @@ Marketing site for an HR analytics and decision-support platform (Turkish). A si
 - Strict Content-Security-Policy (no inline styles or scripts), self-hosted fonts
 - WCAG AA contrast on every colour pair, keyboard and screen-reader friendly, responsive from 360 px
 
+**Related:** the product this site is for, with screenshots of the app: **[hr-analitic-360-demo](https://github.com/alex-buran/hr-analitic-360-demo)**.
+
 Designed and built by **[Softburn.tech](https://softburn.tech)**.
