@@ -275,3 +275,5 @@ h3.baslik { font-size: clamp(1.9rem, 3.2vw, 2.6rem); font-stretch: 74%; line-hei
   .dugmeler .dugme { width: auto; flex: 1 1 auto; }
   .damga { font-size: .7rem; top: .5rem; right: .5rem; }
 }
+
+.alt a.imza { color: #FF5A2A; }
