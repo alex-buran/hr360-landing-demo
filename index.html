@@ -11,10 +11,11 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:title" content="HR Analitic 360 · İK analitiği ve karar destek platformu">
 <meta property="og:description" content="Ne oldu? Sorun nerede? Kimler etkileniyor? Hangi aksiyon? Personel verisi bu dört soruya yanıt veren göstergelere, uyarılara ve aksiyon kayıtlarına dönüşür.">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="css/site.css?v=4">
+<link rel="stylesheet" href="css/site.css?v=5">
 <script src="js/erken.js"></script>
 </head>
 <body>
@@ -31,6 +32,10 @@
       <a href="#sss">Sık sorulan sorular</a>
       <a class="dugme dugme--mavi" href="#">Giriş yap</a>
     </nav>
+    <nav class="dil" aria-label="Dil seçimi">
+      <a href="./" lang="tr" hreflang="tr" aria-current="true">TR</a>
+      <a href="en/" lang="en" hreflang="en">EN</a>
+    </nav>
   </div>
 </header>
 
@@ -39,27 +44,37 @@
   <section class="kahraman" aria-labelledby="h1">
     <div class="arka" aria-hidden="true"><span class="arka-izgara"></span><span class="arka-izgara-isik"></span><span class="arka-isik"></span></div>
     <div class="kap kahraman-izgara">
-      <div class="kahraman-yan">
-        <p>Personel verisini yönetim kararlarına dönüştüren İK analitiği ve karar destek platformu.</p>
-        <div class="dugmeler">
-          <a class="dugme dugme--mavi" href="#">Giriş yap</a>
-          <a class="dugme dugme--cizgi-beyaz" href="#fiyatlandirma">Fiyatlandırma</a>
-          <a class="dugme dugme--duz" href="#iletisim">Teklif talebi</a>
+      <div class="kahraman-ust">
+        <div class="kahraman-baslik">
+          <p class="ust-etiket">İK analitiği, karar destek</p>
+          <p class="slogan"><span>Personel verisini</span> yönetim kararlarına dönüştürün.</p>
+        </div>
+        <div class="kahraman-yan">
+          <p>Mevcut Excel, CSV veya ODS dosyanızı yükleyin. HR Analitic 360 veriyi dört soruya göre düzenler: ne oldu, nerede, kimi etkiliyor ve ne yapılmalı.</p>
+          <ul class="dosya-turleri" aria-label="Desteklenen dosya türleri"><li>XLSX</li><li>CSV</li><li>ODS</li></ul>
+          <div class="dugmeler">
+            <a class="dugme dugme--mavi" href="#iletisim">Teklif talebi</a>
+            <a class="dugme dugme--duz" href="#fiyatlandirma">Fiyatlandırma</a>
+          </div>
         </div>
       </div>
       <div class="sahne">
         <svg class="yorunge" viewBox="0 0 1000 739" aria-hidden="true" focusable="false">
-          <circle class="yorunge-halka" cx="360" cy="430" r="330"/>
-          <path class="hat hat-1" d="M195 144 L110 70"/>
-          <path class="hat hat-2" d="M331 101 L300 25"/>
-          <path class="hat hat-3" d="M499 131 L600 48 H700"/>
-          <path class="hat hat-4" d="M556 163 L840 118"/>
+          <path class="yorunge-halka" d="M195 715.8 A330 330 0 1 1 558.6 166.4"/>
+          <path class="hat hat-1" d="M185 150 L142 106"/>
+          <path class="hat hat-2" d="M314 103 L291 14"/>
+          <path class="hat hat-3" d="M484 124 L549 59 H645"/>
+          <path class="hat hat-4" d="M559 166 L846 117"/>
+          <circle class="dugum dugum-1" cx="185" cy="150" r="3.5"/>
+          <circle class="dugum dugum-2" cx="314" cy="103" r="3.5"/>
+          <circle class="dugum dugum-3" cx="484" cy="124" r="3.5"/>
+          <circle class="dugum dugum-4" cx="559" cy="166" r="3.5"/>
         </svg>
         <h1 id="h1">
-          <a class="h1-satir soru-etiket soru-etiket--sol e1" href="#soru-1">Ne oldu?<span class="nokta" aria-hidden="true"></span></a>
-          <a class="h1-satir soru-etiket soru-etiket--sol e2" href="#soru-2">Sorun nerede?<span class="nokta" aria-hidden="true"></span></a>
-          <a class="h1-satir soru-etiket e3" href="#soru-3"><span class="nokta" aria-hidden="true"></span>Kimler etkileniyor?</a>
-          <a class="h1-satir soru-etiket e4" href="#soru-4"><span class="nokta" aria-hidden="true"></span>Hangi aksiyon?</a>
+          <a class="h1-satir soru-etiket soru-etiket--sol e1" href="#soru-1"><span class="nokta" aria-hidden="true"></span><span>Ne oldu?</span><span class="soru-alt" aria-hidden="true">Pano</span></a>
+          <a class="h1-satir soru-etiket soru-etiket--sol e2" href="#soru-2"><span class="nokta" aria-hidden="true"></span><span>Sorun nerede?</span><span class="soru-alt" aria-hidden="true">Uyarılar</span></a>
+          <a class="h1-satir soru-etiket e3" href="#soru-3"><span class="nokta" aria-hidden="true"></span><span>Kimler etkileniyor?</span><span class="soru-alt" aria-hidden="true">Uyarı listesi</span></a>
+          <a class="h1-satir soru-etiket e4" href="#soru-4"><span class="nokta" aria-hidden="true"></span><span>Hangi aksiyon?</span><span class="soru-alt" aria-hidden="true">Aksiyon Merkezi</span></a>
         </h1>
         <figure class="kahraman-ekran">
           <div class="ekran">
@@ -99,7 +114,7 @@
         <p class="govde">Deneme süresi bitişleri, sözleşme ve çalışma izni tarihleri, eğitim ve sertifika geçerlilikleri, yüksek izin bakiyesi ve yüksek devamsızlık kontrol edilir. Tanımlı eşiği aşan her durum ayrı bir sayaçta gösterilir.</p>
         <div class="ekran">
           <span class="damga">Örnek veri</span>
-          <img src="img/uyarilar-kartlar.webp" width="2400" height="660" alt="Uyarı sayaçları: deneme süresi bitişi 30 gün içinde 4 yaklaşan; yüksek devamsızlık 8 eşiği aşan; yüksek izin bakiyesi 1 eşiği aşan." loading="lazy">
+          <img src="img/uyarilar-kartlar.webp" width="2400" height="660" alt="Uyarı sayaçları: deneme süresi bitişi 30 gün içinde 1 yaklaşan; yüksek devamsızlık 2 eşiği aşan; yüksek izin bakiyesi 1 eşiği aşan." loading="lazy">
         </div>
       </article>
 

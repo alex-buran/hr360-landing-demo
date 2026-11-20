@@ -1,12 +1,23 @@
-// HR Analitic 360 tanıtım sayfası. Yalnızca geliştirme: menü, belirme, plan seçimi, form gönderimi. Her şey JS olmadan da çalışır.
+// HR Analitic 360 tanıtım sayfası. Yalnızca geliştirme: menü, dil, belirme, plan seçimi, form gönderimi. Her şey JS olmadan da çalışır.
 (() => {
   const $ = (s, k = document) => k.querySelector(s);
   const $$ = (s, k = document) => [...k.querySelectorAll(s)];
 
+  // Arayüz metinleri sayfanın diline göre (<html lang>): Türkçe ve İngilizce sayfa aynı betiği kullanır.
+  const METIN = {
+    tr: { menu: 'Menü', kapat: 'Kapat', ad: 'Ad ve soyad girilmelidir.', sirket: 'Kurum adı girilmelidir.', eposta: 'Geçerli bir e-posta adresi girilmelidir.',
+      onay: 'Devam edebilmek için onay verilmesi gerekmektedir.', alindi: 'Talebiniz alınmıştır.', gonderiliyor: 'Gönderiliyor…',
+      basari: 'Talebiniz alınmıştır. En kısa sürede tarafınıza dönüş yapılacaktır.', hata1: 'Talebiniz iletilemedi. Lütfen daha sonra tekrar deneyiniz veya ', hata2: ' adresine yazınız.' },
+    en: { menu: 'Menu', kapat: 'Close', ad: 'Please enter your full name.', sirket: 'Please enter your organization.', eposta: 'Please enter a valid email address.',
+      onay: 'Please give your consent to continue.', alindi: 'Your request has been received.', gonderiliyor: 'Sending…',
+      basari: 'Your request has been received. We will get back to you shortly.', hata1: 'Your request could not be sent. Please try again later or write to ', hata2: '.' },
+  };
+  const M = METIN[document.documentElement.lang] || METIN.tr;
+
   // Mobil menü
   const menuDugme = $('.menu-dugme'), menu = $('#menu');
   if (menuDugme && menu) {
-    const ac = (acik) => { menu.classList.toggle('acik', acik); menuDugme.setAttribute('aria-expanded', String(acik)); menuDugme.textContent = acik ? 'Kapat' : 'Menü'; };
+    const ac = (acik) => { menu.classList.toggle('acik', acik); menuDugme.setAttribute('aria-expanded', String(acik)); menuDugme.textContent = acik ? M.kapat : M.menu; };
     menuDugme.addEventListener('click', () => ac(!menu.classList.contains('acik')));
     menu.addEventListener('click', (e) => { if (e.target.closest('a')) ac(false); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') ac(false); });
@@ -70,23 +81,23 @@
     e.preventDefault();
     const ad = $('#ad').value.trim(), sirket = $('#sirket').value.trim(), eposta = $('#eposta').value.trim(), onay = $('#onay').checked;
     const epostaGecerli = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(eposta);
-    hataYaz('ad', ad ? '' : 'Ad ve soyad girilmelidir.');
-    hataYaz('sirket', sirket ? '' : 'Kurum adı girilmelidir.');
-    hataYaz('eposta', epostaGecerli ? '' : 'Geçerli bir e-posta adresi girilmelidir.');
-    hataYaz('onay', onay ? '' : 'Devam edebilmek için onay verilmesi gerekmektedir.');
+    hataYaz('ad', ad ? '' : M.ad);
+    hataYaz('sirket', sirket ? '' : M.sirket);
+    hataYaz('eposta', epostaGecerli ? '' : M.eposta);
+    hataYaz('onay', onay ? '' : M.onay);
     durumYaz('', '');
     if (!ad || !sirket || !epostaGecerli || !onay) { const ilk = $('[aria-invalid="true"]', form); if (ilk) ilk.focus(); return; }
-    if ($('[name="_honey"]', form).value) { durumYaz('basari', 'Talebiniz alınmıştır.'); form.reset(); return; }   // bot: sessizce yut
-    gonder.disabled = true; durumYaz('', 'Gönderiliyor…');
+    if ($('[name="_honey"]', form).value) { durumYaz('basari', M.alindi); form.reset(); return; }   // bot: sessizce yut
+    gonder.disabled = true; durumYaz('', M.gonderiliyor);
     try {
       const veri = {};
       for (const [k, v] of new FormData(form).entries()) if (typeof v === 'string' && k !== '_honey') veri[k] = v;
       await new Promise((r) => setTimeout(r, 600));   // gösterim: hiçbir yere gönderilmez
-      durumYaz('basari', 'Talebiniz alınmıştır. En kısa sürede tarafınıza dönüş yapılacaktır.');
+      durumYaz('basari', M.basari);
       form.reset();
     } catch {
-      durum.dataset.tur = 'hata'; durum.textContent = 'Talebiniz iletilemedi. Lütfen daha sonra tekrar deneyiniz veya ';
-      const a = document.createElement('a'); a.href = '#'; a.textContent = 'iletisim adresimize'; durum.append(a, ' adresine yazınız.');
+      durum.dataset.tur = 'hata'; durum.textContent = M.hata1;
+      const a = document.createElement('a'); a.href = 'https://softburn.tech'; a.textContent = 'softburn.tech'; durum.append(a, M.hata2);
     } finally { gonder.disabled = false; }
   });
 })();
