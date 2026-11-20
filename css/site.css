@@ -97,10 +97,10 @@ h3.baslik { font-size: clamp(1.9rem, 3.2vw, 2.6rem); font-stretch: 74%; line-hei
 .kahraman-yan p { max-width: 24ch; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 500; line-height: 1.15; letter-spacing: -0.015em; text-wrap: balance; color: var(--beyaz); }
 
 /* Sahne: panonun arkasında, sola kaymış kesik çizgili yörünge; dört soru ona kesik çizgilerle bağlı. Koordinatlar SVG ile aynı: 1000 birim = sahne genişliği. */
-.sahne { position: relative; container-type: inline-size; padding-top: 24cqw; margin-bottom: clamp(-11rem, -13vw, -4rem); }
+.sahne { position: relative; container-type: inline-size; padding-top: 17cqw; margin-bottom: clamp(-11rem, -13vw, -4rem); }
 .yorunge { position: absolute; top: 0; left: 0; width: 100%; height: auto; overflow: visible; pointer-events: none; }
-.yorunge-halka { fill: none; stroke: color-mix(in oklab, var(--beyaz) 32%, transparent); stroke-width: 1.5; stroke-dasharray: 5 9; transform-origin: 430px 460px; animation: yorunge 140s linear infinite; }
-.hat { fill: none; stroke: color-mix(in oklab, var(--beyaz) 30%, transparent); stroke-width: 1.25; stroke-dasharray: 3 6; transition: stroke .3s var(--kolay), stroke-width .3s var(--kolay); }
+.yorunge-halka { fill: none; stroke: color-mix(in oklab, var(--beyaz) 40%, transparent); stroke-width: 1.75; stroke-dasharray: 16 10; transform-origin: 360px 430px; animation: yorunge 140s linear infinite; }
+.hat { fill: none; stroke: color-mix(in oklab, var(--beyaz) 42%, transparent); stroke-width: 1.25; transition: stroke .3s var(--kolay), stroke-width .3s var(--kolay); }
 @keyframes yorunge { to { transform: rotate(360deg); } }
 .kahraman h1 { position: absolute; inset: 0; z-index: 2; pointer-events: none; font-size: clamp(1rem, 1.6cqw, 1.25rem); font-weight: 500; line-height: 1.6; letter-spacing: 0; }
 .soru-etiket {
@@ -109,10 +109,10 @@ h3.baslik { font-size: clamp(1.9rem, 3.2vw, 2.6rem); font-stretch: 74%; line-hei
 }
 .soru-etiket--sol { margin-right: -5px; }
 .soru-etiket:not(.soru-etiket--sol) { margin-left: -5px; }
-.e1 { right: calc(100cqw - 9.5cqw); top: 15cqw; }
-.e2 { right: calc(100cqw - 25cqw); top: 4.5cqw; }
-.e3 { left: 64cqw; top: 4.5cqw; }
-.e4 { left: 79cqw; top: 14cqw; color: var(--mavi-ac); }
+.e1 { right: calc(100cqw - 11cqw); top: 7cqw; }
+.e2 { right: calc(100cqw - 30cqw); top: 2.5cqw; }
+.e3 { left: 70cqw; top: 4.8cqw; }
+.e4 { left: 84cqw; top: 11.8cqw; color: var(--mavi-ac); }
 .nokta { flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--mavi); box-shadow: 0 0 0 4px color-mix(in oklab, var(--mavi) 18%, transparent), 0 0 16px 2px color-mix(in oklab, var(--mavi) 65%, transparent); transition: transform .3s var(--kolay), box-shadow .3s var(--kolay); animation: nabiz 3.2s ease-in-out infinite; }
 @keyframes nabiz { 50% { box-shadow: 0 0 0 6px color-mix(in oklab, var(--mavi) 10%, transparent), 0 0 22px 4px color-mix(in oklab, var(--mavi) 50%, transparent); } }
 .soru-etiket:hover, .soru-etiket:focus-visible { color: var(--beyaz); }
