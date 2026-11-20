@@ -14,7 +14,7 @@
 <meta property="og:title" content="HR Analitic 360 · İK analitiği ve karar destek platformu">
 <meta property="og:description" content="Ne oldu? Sorun nerede? Kimler etkileniyor? Hangi aksiyon? Personel verisi bu dört soruya yanıt veren göstergelere, uyarılara ve aksiyon kayıtlarına dönüşür.">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="css/site.css?v=2">
+<link rel="stylesheet" href="css/site.css?v=3">
 <script src="js/erken.js"></script>
 </head>
 <body>
@@ -22,7 +22,7 @@
 
 <header class="ust">
   <div class="kap">
-    <a class="marka" href="#" aria-label="HR Analitic 360, sayfanın başı"><span class="marka-halka" aria-hidden="true">360</span>HR Analitic</a>
+    <a class="marka" href="#" aria-label="HR Analitic 360, sayfanın başı"><img src="img/logo.svg" width="322" height="48" alt=""></a>
     <button class="menu-dugme" type="button" aria-expanded="false" aria-controls="menu">Menü</button>
     <nav class="menu" id="menu" aria-label="Ana gezinme">
       <a href="#sorular">Özellikler</a>
@@ -39,12 +39,6 @@
   <section class="kahraman" aria-labelledby="h1">
     <div class="arka" aria-hidden="true"><span class="arka-izgara"></span><span class="arka-izgara-isik"></span><span class="arka-isik"></span></div>
     <div class="kap kahraman-izgara">
-      <h1 id="h1">
-        <span class="h1-satir">Ne oldu?</span>
-        <span class="h1-satir">Sorun nerede?</span>
-        <span class="h1-satir">Kimler etkileniyor?</span>
-        <span class="h1-satir">Hangi aksiyon?</span>
-      </h1>
       <div class="kahraman-yan">
         <p>Personel verisini yönetim kararlarına dönüştüren İK analitiği ve karar destek platformu.</p>
         <div class="dugmeler">
@@ -53,13 +47,28 @@
           <a class="dugme dugme--duz" href="#iletisim">Teklif talebi</a>
         </div>
       </div>
-      <figure class="kahraman-ekran">
-        <div class="ekran">
-          <span class="damga">Örnek veri</span>
-          <picture><source media="(max-width: 700px)" srcset="img/dashboard-icerik.webp" width="2400" height="1520"><img src="img/dashboard.webp" width="2880" height="1800" alt="HR Analitic 360 ana pano: toplam çalışan 195, devir oranı yüzde 10,2, devamsızlık oranı yüzde 11,2, açık pozisyon 9; işe alım eğilimi grafiği ve son işe alımlar." fetchpriority="high"></picture>
-        </div>
-        <figcaption class="gizli">Ürünün gerçek ekranı, kurgusal bir şirkete ait örnek verilerle.</figcaption>
-      </figure>
+      <div class="sahne">
+        <svg class="yorunge" viewBox="0 0 1000 809" aria-hidden="true" focusable="false">
+          <circle class="yorunge-halka" cx="430" cy="460" r="360"/>
+          <path class="hat hat-1" d="M95 150 H125 L154 229"/>
+          <path class="hat hat-2" d="M250 45 H300 L337 112"/>
+          <path class="hat hat-3" d="M553 122 L590 45 H640"/>
+          <path class="hat hat-4" d="M685 205 L740 140 H790"/>
+        </svg>
+        <h1 id="h1">
+          <a class="h1-satir soru-etiket soru-etiket--sol e1" href="#soru-1">Ne oldu?<span class="nokta" aria-hidden="true"></span></a>
+          <a class="h1-satir soru-etiket soru-etiket--sol e2" href="#soru-2">Sorun nerede?<span class="nokta" aria-hidden="true"></span></a>
+          <a class="h1-satir soru-etiket e3" href="#soru-3"><span class="nokta" aria-hidden="true"></span>Kimler etkileniyor?</a>
+          <a class="h1-satir soru-etiket e4" href="#soru-4"><span class="nokta" aria-hidden="true"></span>Hangi aksiyon?</a>
+        </h1>
+        <figure class="kahraman-ekran">
+          <div class="ekran">
+            <span class="damga">Örnek veri</span>
+            <picture><source media="(max-width: 700px)" srcset="img/dashboard-icerik.webp" width="2400" height="1520"><img src="img/dashboard.webp" width="2880" height="1800" alt="HR Analitic 360 ana pano: toplam çalışan 195, devir oranı yüzde 10,2, devamsızlık oranı yüzde 11,2, açık pozisyon 9; işe alım eğilimi grafiği ve son işe alımlar." fetchpriority="high"></picture>
+          </div>
+          <figcaption class="gizli">Ürünün gerçek ekranı, kurgusal bir şirkete ait örnek verilerle.</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -70,7 +79,7 @@
         <p class="govde soluk">İK verisi çoğunlukla dağınık tablolarda bulunur. Mevcut Excel, CSV veya ODS dosyalarınız yüklenir; HR Analitic 360 bu veriyi sırasıyla gerçekleşen durumu, sorunun yerini ve etkilenenleri, son olarak alınması gereken aksiyonu gösterecek biçimde düzenler.</p>
       </div>
 
-      <article class="soru soru--tam belir">
+      <article id="soru-1" class="soru soru--tam belir">
         <div class="soru-baslik">
           <h3 class="baslik">Ne oldu?</h3>
           <p class="soru-ad">Pano</p>
@@ -82,7 +91,7 @@
         </div>
       </article>
 
-      <article class="soru soru--sag belir">
+      <article id="soru-2" class="soru soru--sag belir">
         <div class="soru-baslik">
           <h3 class="baslik">Sorun nerede?</h3>
           <p class="soru-ad">Uyarılar</p>
@@ -94,7 +103,7 @@
         </div>
       </article>
 
-      <article class="soru soru--tam belir">
+      <article id="soru-3" class="soru soru--tam belir">
         <div class="soru-baslik">
           <h3 class="baslik">Kimler etkileniyor?</h3>
           <p class="soru-ad">Uyarı listesi</p>
@@ -106,7 +115,7 @@
         </div>
       </article>
 
-      <article class="soru soru--sol belir">
+      <article id="soru-4" class="soru soru--sol belir">
         <div class="soru-baslik">
           <h3 class="baslik">Hangi aksiyon?</h3>
           <p class="soru-ad">Aksiyon Merkezi</p>
